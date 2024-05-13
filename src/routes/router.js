@@ -6,6 +6,7 @@ import AdminPage from "../pages/AdminPage/AdminPage";
 import HRPage from "../pages/HRPage/HRPage";
 import MentorPage from "../pages/MentorPage/MentorPage";
 import InternCoordinators from "../pages/InternCoordinators/InternCoordinators";
+import SignupPage from "../pages/SignupPage/SignupPage";
 
 export const routes =[
     {
@@ -62,12 +63,20 @@ export const routes =[
 
     },
     {
-        path:'/login',
+        path:'/sign-in',
         page:SigninPage,
         isShowHeader:true
 
 
     },
+    {
+        path:'/sign-up',
+        page:SignupPage,
+        isShowHeader:true
+
+
+    },
+ 
  
    
 

@@ -17,7 +17,7 @@ import { useNavigate } from 'react-router-dom';
 import {useState} from 'react'
 import { useGoogleLogin } from '@react-oauth/google';
 
-const SigninPage = () => {
+const SignupPage = () => {
 
   // const history = useHistory();
   const navigate= useNavigate();
@@ -41,12 +41,15 @@ const SigninPage = () => {
   });
 
 
-  const handleNavigateSignUp = () => {
-    navigate('/sign-up')
+  const handleNavigateSignIn = () => {
+    navigate('/sign-in')
   }
 
+
   const [isPasswordShow,setIsPasswordShow]=useState(false)
+  const [isShowConfirmPassword, setIsShowConfirmPassword] = useState(false)
   const[password,setPassword]=useState()
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [email,setEmail]=useState()
 
 
@@ -54,6 +57,9 @@ const SigninPage = () => {
     setPassword(value)
   }
 
+  const handleOnchangeConfirmPassword = (value) => {
+    setConfirmPassword(value)
+  }
   const handleOnchangeEmail = (value) => {
     setEmail(value)
   }
@@ -175,7 +181,7 @@ const SigninPage = () => {
           onChange={handleOnchangePassword}
         />
       </div> */}
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: 'relative',marginBottom:'10px' }}>
            <span
               onClick={() => setIsPasswordShow(!isPasswordShow)}
               style={{
@@ -201,7 +207,32 @@ const SigninPage = () => {
               // style={{ marginBottom: '30px',fontSize:'30px',width:'100%',height:'100px' }}
             />
           </div>
-          
+          <div style={{ position: 'relative' }}>
+           <span
+              onClick={() => setIsShowConfirmPassword(!isShowConfirmPassword)}
+              style={{
+                zIndex: 10,
+                position: 'absolute',
+                top: '4px',
+                right: '8px'
+              }}
+            >
+              {
+                isShowConfirmPassword ? (
+                  <EyeFilled  />
+                ) : (
+                  <EyeInvisibleFilled  />
+                )
+              }
+            </span>
+            <InputFormComponent
+              placeholder="Xác nhận mật khẩu"
+              type={isShowConfirmPassword ? "text" : "password"}
+              value={confirmPassword}
+              onChange={handleOnchangeConfirmPassword}
+              // style={{ marginBottom: '30px',fontSize:'30px',width:'100%',height:'100px' }}
+            />
+          </div>
       {/* {data?.status === 'ERR' && <span style={{ color: 'red' }}>{data?.message}</span>} */}
       {/* <Loading isLoading={isLoading}> */}
         <ButtonComponent
@@ -220,8 +251,7 @@ const SigninPage = () => {
           styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '700' }}
         ></ButtonComponent>
       {/* </Loading> */}
-      <p><WrapperTextLight>Quên mật khẩu?</WrapperTextLight></p>
-      <p>Chưa có tài khoản? <WrapperTextLight onClick={handleNavigateSignUp}> Tạo tài khoản</WrapperTextLight></p>
+      <p>Bạn đã có tài khoản? <WrapperTextLight onClick={handleNavigateSignIn}> Đăng nhập</WrapperTextLight></p>
     </WrapperContainerLeft>
     <WrapperContainerRight>
       {/* <Image src={image1} preview={false} alt="iamge-logo" height="203px" width="203px" /> */}
@@ -244,4 +274,4 @@ const SigninPage = () => {
   )
 }
 
-export default SigninPage
+export default SignupPage
