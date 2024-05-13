@@ -12,7 +12,7 @@ const HeaderComponent = () => {
     const navigate = useNavigate()
 
 const handleNavigateLogin = () => {
-        navigate('/login')
+        navigate('/sign-in')
       }
   return (
     <div  style={{  heiht: '100%', width: '100%', display: 'flex',background: '#2D3748', justifyContent: 'center' }}>
