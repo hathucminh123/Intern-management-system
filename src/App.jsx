@@ -21,7 +21,7 @@
 import React, { Fragment } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from './redux/slides/counterSlice'
-import './App.css'
+
 import styled from 'styled-components';
 import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom';
 import { routes } from './routes/router';
