@@ -118,12 +118,12 @@ const MenuListComponent = ({ darkTheme, selectedKey, handleMenuClick }) => {
   return (
  
       <Menu
-        theme={darkTheme ? 'dark' : 'light'}
+        theme={darkTheme ? "dark" : "light"}
         mode='inline'
         selectedKeys={[selectedKey]}
         onClick={({ key }) => handleMenuClick(key)}
         style={{
-          height: '88vh',
+          height: '100vh',
           marginTop: '2rem',
           display: 'flex',
           flexDirection: 'column',
