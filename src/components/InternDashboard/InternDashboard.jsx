@@ -45,11 +45,11 @@ const InternDashBoard = () => {
 
     return (
         <>
-        <Typography.Title level={2} strong>
-                    Task Status
-                </Typography.Title>
+            <Typography.Title level={2} strong>
+                Task Status
+            </Typography.Title>
             <Row gutter={[16, 100]} style={{ marginBottom: '50px' }}>
-                
+
                 <Col span={8}>
                     <CardContent
                         count="4"
