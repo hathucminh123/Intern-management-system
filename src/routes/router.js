@@ -7,87 +7,57 @@ import HRPage from "../pages/HRPage/HRPage";
 import MentorPage from "../pages/MentorPage/MentorPage";
 import InternCoordinators from "../pages/InternCoordinators/InternCoordinators";
 import SignupPage from "../pages/SignupPage/SignupPage";
+import InternPage from "../pages/Intern/InternPage";
 
-export const routes =[
+export const routes = [
     {
-         path:'/',
-         page:HomePage,
-         isShowHeader: false,
-        
-         
-
-
-     },
-     {
-        path:'/admin',
-        page:AdminPage,
+        path: '/',
+        page: HomePage,
         isShowHeader: false,
-        
-        
-
-
     },
     {
-        path:'/HRsystem',
-        page:HRPage,
+        path: '/intern',
+        page: InternPage,
         isShowHeader: false,
-    
     },
     {
-        path:'/Mentor',
-        page:MentorPage,
+        path: '/admin',
+        page: AdminPage,
         isShowHeader: false,
-    
     },
     {
-        path:'/Mentor',
-        page:MentorPage,
+        path: '/HRsystem',
+        page: HRPage,
         isShowHeader: false,
-    
     },
     {
-        path:'/InternCoordinators',
-        page:InternCoordinators,
+        path: '/Mentor',
+        page: MentorPage,
         isShowHeader: false,
-    
-    },
-     
-     
-     
-    
-    {
-        path:'/not',
-        page:NotFoundPage,
-        isShowHeader:false
-
-
     },
     {
-        path:'/sign-in',
-        page:SigninPage,
-        isShowHeader:false
-
-
+        path: '/Mentor',
+        page: MentorPage,
+        isShowHeader: false,
     },
     {
-        path:'/sign-up',
-        page:SignupPage,
-        isShowHeader:false
-
-
+        path: '/InternCoordinators',
+        page: InternCoordinators,
+        isShowHeader: false,
     },
- 
- 
-   
-
-
-
-
-
-
-
-
-
-
-
+    {
+        path: '/not',
+        page: NotFoundPage,
+        isShowHeader: false
+    },
+    {
+        path: '/sign-in',
+        page: SigninPage,
+        isShowHeader: false
+    },
+    {
+        path: '/sign-up',
+        page: SignupPage,
+        isShowHeader: false
+    },
 ]
