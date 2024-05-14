@@ -151,7 +151,7 @@ import MenuListComponent from '../../components/MenuListComponent/MenuListCompon
 import ToggleThemeButton from '../../components/ToogleThemeButton/ToggleThemeButton';
 import MainContent from '../../components/MainContent/MainContent';
 import SideContent from '../../components/SideContent/SideContent';
-
+import DefaultComponent from '../../components/DefaultComponent.jsx/DefaultComponent';
 
 const { Header, Sider, Content } = Layout;
 
@@ -187,7 +187,7 @@ const HomePage = () => {
     setSelectedKey(key);
   };
 
-  const { colorBgContainer, borderRadiusLG } = theme.useToken();
+  const { token:{colorBgContainer,borderRadiusLG}} = theme.useToken();
 
   return (
     <Layout>
@@ -195,10 +195,10 @@ const HomePage = () => {
         collapsed={collapsed}
         collapsible
         trigger={null}
-        theme={darkTheme ? 'light' : 'dark'}
+        theme={darkTheme ? 'dark' : 'light'}
         style={{ color: '#fff' }}
       >
-        <Logo />
+        <Logo/>
         <MenuListComponent
           darkTheme={darkTheme}
           selectedKey={selectedKey}
@@ -209,14 +209,15 @@ const HomePage = () => {
       </Sider>
 
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }}>
+        <DefaultComponent background={colorBgContainer} >
           <Button
-            style={{ marginRight: '1045px', color: 'white' }}
+            style={{ marginLeft: '15px', position:'absolute', top:'20px' }}
+            collapsed={collapsed}
             type='text'
             onClick={() => setCollapsed(!collapsed)}
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
           />
-        </Header>
+        </DefaultComponent>
         <Content
           style={{
             margin: '24px 16px',
@@ -226,7 +227,7 @@ const HomePage = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-          <Flex gap="large">
+          <Flex  gap="large">
           {/* <div>
             <MainContent />
             <SideContent />

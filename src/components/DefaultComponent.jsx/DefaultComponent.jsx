@@ -2,11 +2,11 @@ import React from 'react'
 import HeaderComponent from '../HeaderComponent.jsx/HeaderComponent'
 import MenuListComponent from '../MenuListComponent/MenuListComponent'
 
-const DefaultComponent = ({children}) => {
+const DefaultComponent = ({children,background}) => {
   return (
     <div>
       
-        <HeaderComponent/>
+        <HeaderComponent background={background}/>
         {children}
         
     </div>

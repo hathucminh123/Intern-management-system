@@ -12,7 +12,7 @@ export const routes =[
     {
          path:'/',
          page:HomePage,
-         isShowHeader: true,
+         isShowHeader: false,
         
          
 
@@ -21,7 +21,7 @@ export const routes =[
      {
         path:'/admin',
         page:AdminPage,
-        isShowHeader: true,
+        isShowHeader: false,
         
         
 
@@ -30,25 +30,25 @@ export const routes =[
     {
         path:'/HRsystem',
         page:HRPage,
-        isShowHeader: true,
+        isShowHeader: false,
     
     },
     {
         path:'/Mentor',
         page:MentorPage,
-        isShowHeader: true,
+        isShowHeader: false,
     
     },
     {
         path:'/Mentor',
         page:MentorPage,
-        isShowHeader: true,
+        isShowHeader: false,
     
     },
     {
         path:'/InternCoordinators',
         page:InternCoordinators,
-        isShowHeader: true,
+        isShowHeader: false,
     
     },
      
@@ -65,14 +65,14 @@ export const routes =[
     {
         path:'/sign-in',
         page:SigninPage,
-        isShowHeader:true
+        isShowHeader:false
 
 
     },
     {
         path:'/sign-up',
         page:SignupPage,
-        isShowHeader:true
+        isShowHeader:false
 
 
     },

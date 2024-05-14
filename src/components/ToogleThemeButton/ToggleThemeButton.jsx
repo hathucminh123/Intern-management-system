@@ -5,7 +5,7 @@ import { ToggleThemeButtons } from './style';
 
 const ToggleThemeButton = ({ darkTheme, toggleTheme }) => {
   return (
-    <ToggleThemeButtons>
+    <ToggleThemeButtons style={{position:'absolute',bottom:'30px',left:'20px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'1rem'}}>
       <Button onClick={toggleTheme}>
         {darkTheme ? <HiOutlineSun /> : <HiOutlineMoon />}
       </Button>
