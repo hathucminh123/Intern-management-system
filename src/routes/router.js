@@ -7,6 +7,7 @@ import HRPage from "../pages/HRPage/HRPage";
 import MentorPage from "../pages/MentorPage/MentorPage";
 import InternCoordinators from "../pages/InternCoordinators/InternCoordinators";
 import SignupPage from "../pages/SignupPage/SignupPage";
+import TaskComponent from "../components/MentorComponent/TaskComponent/TaskComponent";
 
 export const routes =[
     {
@@ -34,17 +35,18 @@ export const routes =[
     
     },
     {
-        path:'/Mentor',
+        path:'/mentor',
         page:MentorPage,
         isShowHeader: false,
     
     },
     {
-        path:'/Mentor',
-        page:MentorPage,
+        path:'/tasks',
+        page:TaskComponent,
         isShowHeader: false,
     
     },
+    
     {
         path:'/InternCoordinators',
         page:InternCoordinators,
