@@ -9,6 +9,7 @@ import SideContent from '../../components/SideContent/SideContent';
 import DefaultComponent from '../../components/DefaultComponent.jsx/DefaultComponent';
 import TaskTable from '../../components/InternTaskTable/InternTaskTable';
 import InternDashBoard from '../../components/InternDashboard/InternDashboard';
+import InternTaskTab from '../../components/InternTask/InternTaskTab';
 
 const InternPage = () => {
     const { Header, Sider, Content } = Layout;
@@ -33,7 +34,7 @@ const InternPage = () => {
                     <InternDashBoard/>
                 </>
             case 'courses':
-                return <div>courses</div>;
+                return <div><InternTaskTab/></div>;
             case 'assignment':
                 return <div>courses</div>;
             case 'schedule':
