@@ -1,18 +1,18 @@
 import React from 'react';
 import { Menu } from 'antd';
-import { HomeOutlined, AppstoreOutlined, AreaChartOutlined, ContactsOutlined, ProjectOutlined } from '@ant-design/icons';
+import { HomeOutlined, AppstoreOutlined, AreaChartOutlined, ContactsOutlined, ProjectOutlined,WechatWorkOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 
 const MENU_KEYS = {
   HOME: 'home',
-  COURSES: 'courses',
-  ASSIGNMENT: 'assignment',
+  TASK: 'task',
+  CHAT: 'chat',
   SCHEDULE: 'schedule',
   SETTING: 'setting',
 };
 
-const MenuListComponent = ({ darkTheme, selectedKey, handleMenuClick }) => {
+const MenuListMentorComponent = ({ darkTheme, selectedKey, handleMenuClick }) => {
   return (
     <Menu
       theme={darkTheme ? 'dark' : 'light'}
@@ -33,12 +33,14 @@ const MenuListComponent = ({ darkTheme, selectedKey, handleMenuClick }) => {
         Trang chủ
       </Menu.Item>
 
-      <Menu.Item key={MENU_KEYS.COURSES} icon={<AppstoreOutlined />}>
-        Các khóa học
-      </Menu.Item>
+      <SubMenu key={MENU_KEYS.TASK} icon={<AppstoreOutlined />} title="Các khóa học Tasks">
+        <Menu.Item key={`${MENU_KEYS.TASK}-1`}> Tạo Task </Menu.Item>
+        <Menu.Item key={`${MENU_KEYS.TASK}-2`}> Task hoàn thành </Menu.Item>
+        <Menu.Item key={`${MENU_KEYS.TASK}-3`}> Task đang thực hiện </Menu.Item>
+      </SubMenu>
 
-      <Menu.Item key={MENU_KEYS.ASSIGNMENT} icon={<ProjectOutlined />}>
-        Assignment
+      <Menu.Item key={MENU_KEYS.CHAT} icon={<WechatWorkOutlined />}>
+        Chat
       </Menu.Item>
 
       <Menu.Item key={MENU_KEYS.SCHEDULE} icon={<AreaChartOutlined />}>
@@ -46,10 +48,10 @@ const MenuListComponent = ({ darkTheme, selectedKey, handleMenuClick }) => {
       </Menu.Item>
 
       <Menu.Item key={MENU_KEYS.SETTING} icon={<ContactsOutlined />}>
-        Mentor
+        Cài đặt
       </Menu.Item>
     </Menu>
   );
 };
 
-export default MenuListComponent;
+export default MenuListMentorComponent;
