@@ -111,13 +111,13 @@ const DashBoardComponent = () => {
       icon: <LuClipboardEdit />,
       bg: "bg-[#f59e0b]",
     },
-    // {
-    //   _id: "4",
-    //   label: "TODOS",
-    //   total: totals["todo"],
-    //   icon: <FaArrowsToDot />,
-    //   bg: "bg-[#be185d]" || 0,
-    // },
+    {
+      _id: "4",
+      label: "TODOS",
+      total: totals["todo"],
+      icon: <FaArrowsToDot />,
+      bg: "bg-[#be185d]" || 0,
+    },
   ];
 
   const Card = ({ label, count, bg, icon }) => {

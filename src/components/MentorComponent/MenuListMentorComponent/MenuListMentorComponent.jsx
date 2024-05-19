@@ -36,7 +36,7 @@ const MenuListMentorComponent = ({ darkTheme, selectedKey, handleMenuClick }) =>
       <SubMenu key={MENU_KEYS.TASK} icon={<AppstoreOutlined />} title="Các khóa học Tasks">
         <Menu.Item key={`${MENU_KEYS.TASK}-1`}> Tạo Task </Menu.Item>
         <Menu.Item key={`${MENU_KEYS.TASK}-2`}> Task hoàn thành </Menu.Item>
-        <Menu.Item key={`${MENU_KEYS.TASK}-3`}> Task đang thực hiện </Menu.Item>
+        {/* <Menu.Item key={`${MENU_KEYS.TASK}-3`}> Task đang thực hiện </Menu.Item> */}
       </SubMenu>
 
       <Menu.Item key={MENU_KEYS.CHAT} icon={<WechatWorkOutlined />}>

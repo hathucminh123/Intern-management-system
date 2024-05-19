@@ -10,6 +10,9 @@ import DefaultComponent from '../../components/DefaultComponent.jsx/DefaultCompo
 import DashBoardComponent from '../../components/MentorComponent/DashboardComponent/DashBoardComponent';
 import TaskComponent from  '../../components/MentorComponent/TaskComponent/TaskComponent'
 
+// import ChatRoom from '../../components/MentorComponent/ChatRoom/index';
+import SideBar from '../../components/MentorComponent/ChatRoom/SideBar';
+import ChatWindow from '../../components/MentorComponent/ChatRoom/ChatWindow';
 
 const { Header, Sider, Content } = Layout;
 
@@ -20,7 +23,10 @@ const renderPage = (key) => {
     case 'task-1':
       return <TaskComponent/>;
     case 'chat':
-      return <div>chat</div>;
+      return <>
+      <SideBar />
+      <ChatWindow/>
+             </>
     case 'schedule':
       return <div>lịch trình</div>;
     case 'setting':
